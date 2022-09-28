@@ -30,7 +30,8 @@ X, y_true = make_blobs(n_samples=300, centers=4,
 
 plt.scatter(X[:, 0], X[:, 1], s=50);
 ```
-Based on this scatter plot, we can assume that the best k value is 4. The data points seem to naturally cluster in 4 groups. The centroids of these groups can be calculated and visualized by running the code below.
+Based on the scatter plot (view after running code), we can assume that the best k value is 4. The data points seem to naturally cluster in 4 groups. The centroids of these groups can be calculated and visualized by running the code below.
+
 
 ```python
 plt.scatter(X[:, 0], X[:, 1], c=y_kmeans, s=50, cmap='viridis')
@@ -52,8 +53,9 @@ visualizer = KElbowVisualizer(model,k=(2,12))
 visualizer.fit(X)
 visualizer.show()
 ```
-![Distortion Score]
-The generated figure confirms that 4 is the best k. 
+![Distortion Score](https://github.com/jainarinen/CSCI_4120_HW2/blob/main/distortion_score.jpeg)
+
+**The generated figure confirms that 4 is the best k.**
 
 Next, we can calculate the accuracy of our K-means model. But first, you want to prepare your predictions by using the code below.
 
@@ -75,7 +77,8 @@ from sklearn.metrics import accuracy_score
 accuracy = accuracy_score(y_true, labels)
 print(accuracy)
 ```
-The accuracy for this KMeans model was 1. This means the predicted values all matched the observed values. This can be visualized with the sklearn.metrics package. The confusion matrix array was made into a data.frame before using the heat map visualization tool.
+**The accuracy for this KMeans model was 1.**
+This means the predicted values all matched the observed values. This can be visualized with the sklearn.metrics package. The confusion matrix array was made into a data.frame before using the heat map visualization tool.
 
 ```python
 from sklearn.metrics import confusion_matrix
@@ -91,4 +94,277 @@ plt.ylabel('predicted label');
 
 plt.show()
 ```
+**Confusion Matrix**
+
 ![Confussion Matrix](https://github.com/jainarinen/CSCI_4120_HW2/blob/main/hw_2_cm.jpeg)
+
+
+
+
+
+##Supplementary Pip List Info:
+
+The current packages were installed prior to this project.
+
+Package                Version
+
+---------------------- --------------------
+
+apturl                 0.5.2
+
+attrs                  19.3.0
+
+backcall               0.1.0
+
+bcrypt                 3.1.7
+
+bleach                 3.1.1
+
+blinker                1.4
+
+Brlapi                 0.7.0
+
+certifi                2019.11.28
+
+chardet                3.0.4
+
+Click                  7.0
+
+colorama               0.4.3
+
+command-not-found      0.3
+
+cryptography           2.8
+
+cupshelpers            1.0
+
+cycler                 0.11.0
+
+dbus-python            1.2.16
+
+decorator              4.4.2
+
+defer                  1.0.6
+
+defusedxml             0.6.0
+
+distlib                0.3.6
+
+distro                 1.4.0
+
+distro-info            0.23ubuntu1
+
+duplicity              0.8.12.0
+
+entrypoints            0.3
+
+fasteners              0.14.1
+
+filelock               3.8.0
+
+fonttools              4.37.1
+
+future                 0.18.2
+
+html5lib               1.0.1
+
+httplib2               0.14.0
+
+idna                   2.8
+
+importlib-metadata     1.5.0
+
+ipykernel              5.2.0
+
+ipython                7.13.0
+
+ipython_genutils       0.2.0
+
+ipywidgets             6.0.0
+
+jedi                   0.15.2
+
+Jinja2                 2.10.1
+
+joblib                 1.1.0
+
+jsonschema             3.2.0
+
+jupyter-client         6.1.2
+
+jupyter-console        6.0.0
+
+jupyter-core           4.6.3
+
+keyring                18.0.1
+
+kiwisolver             1.4.4
+
+language-selector      0.1
+
+launchpadlib           1.10.13
+
+lazr.restfulclient     0.14.2
+
+lazr.uri               1.0.3
+
+lockfile               0.12.2
+
+louis                  3.12.0
+
+macaroonbakery         1.3.1
+
+Mako                   1.1.0
+
+MarkupSafe             1.1.0
+
+matplotlib             3.5.3
+
+mistune                0.8.4
+
+monotonic              1.5
+
+more-itertools         4.2.0
+
+nbconvert              5.6.1
+
+nbformat               5.0.4
+
+netifaces              0.10.4
+
+notebook               6.0.3
+
+numpy                  1.23.3
+
+oauthlib               3.1.0
+
+olefile                0.46
+
+packaging              21.3
+
+pandas                 1.4.4
+
+pandocfilters          1.4.2
+
+paramiko               2.6.0
+
+parso                  0.5.2
+
+pexpect                4.6.0
+
+pickleshare            0.7.5
+
+Pillow                 7.0.0
+
+pip                    22.2.2
+
+platformdirs           2.5.2
+
+prometheus-client      0.7.1
+
+prompt-toolkit         2.0.10
+
+protobuf               3.6.1
+
+pycairo                1.16.2
+
+pycups                 1.9.73
+
+Pygments               2.3.1
+
+PyGObject              3.36.0
+
+PyJWT                  1.7.1
+
+pymacaroons            0.13.0
+
+PyNaCl                 1.3.0
+
+pyparsing              3.0.9
+
+pyRFC3339              1.1
+
+pyrsistent             0.15.5
+
+python-apt             2.0.0+ubuntu0.20.4.7
+
+python-dateutil        2.8.2
+
+python-debian          0.1.36ubuntu1
+
+pytz                   2022.2.1
+
+pyxdg                  0.26
+
+PyYAML                 5.3.1
+
+pyzmq                  18.1.1
+
+reportlab              3.5.34
+
+requests               2.22.0
+
+requests-unixsocket    0.2.0
+
+scikit-learn           1.1.2
+
+scipy                  1.9.1
+
+seaborn                0.12.0
+
+SecretStorage          2.3.1
+
+Send2Trash             1.5.0
+
+setuptools             45.2.0
+
+simplejson             3.16.0
+
+six                    1.14.0
+
+ssh-import-id          5.10
+
+systemd-python         234
+
+terminado              0.8.2
+
+testpath               0.4.4
+
+threadpoolctl          3.1.0
+
+tornado                5.1.1
+
+traitlets              4.3.3
+
+ubuntu-advantage-tools 27.6
+
+ubuntu-drivers-common  0.0.0
+
+ufw                    0.36
+
+unattended-upgrades    0.1
+
+urllib3                1.25.8
+
+usb-creator            0.3.7
+
+virtualenv             20.16.3
+
+wadllib                1.3.3
+
+wcwidth                0.1.8
+
+webencodings           0.5.1
+
+wheel                  0.34.2
+
+widgetsnbextension     2.0.0
+
+xkit                   0.0.0
+
+yellowbrick            1.5
+
+zipp                   1.0.0
+
+Note: you may need to restart the kernel to use updated packages.
+
