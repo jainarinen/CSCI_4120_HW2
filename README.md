@@ -52,6 +52,7 @@ visualizer = KElbowVisualizer(model,k=(2,12))
 visualizer.fit(X)
 visualizer.show()
 ```
+![Distortion Score]
 The generated figure confirms that 4 is the best k. 
 
 Next, we can calculate the accuracy of our K-means model. But first, you want to prepare your predictions by using the code below.
@@ -90,4 +91,4 @@ plt.ylabel('predicted label');
 
 plt.show()
 ```
-![Confussion Matrix](
+![Confussion Matrix](https://github.com/jainarinen/CSCI_4120_HW2/blob/main/hw_2_cm.jpeg)
