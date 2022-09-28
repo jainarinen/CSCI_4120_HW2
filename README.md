@@ -102,7 +102,7 @@ plt.show()
 
 
 
-##Supplementary Pip List Info:
+## Supplementary Pip List Info:
 
 The current packages were installed prior to this project.
 
